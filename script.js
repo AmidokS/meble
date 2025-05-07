@@ -17,6 +17,6 @@ for (let i = 1; i <= 20; i++) {
 const burger = document.getElementById("burger");
 const nav = document.querySelector("nav");
 
-burger.addEventListener('click', () => {
-    nav.classList.toogle("active");
+burger.addEventListener("click", () => {
+    nav.classList.toggle("active");
 });

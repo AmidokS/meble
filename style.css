@@ -54,15 +54,6 @@ header, h1 {
     flex-grow: 1;
 }
 
-.burger {
-    font-size: 30px;
-    background-color: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-
 nav {
     display: flex;
     gap: 20px;
@@ -167,12 +158,22 @@ footer {
     gap: 20px;
 }
 
+
+.burger {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+/* Адаптация для телефонов */
 @media (max-width: 768px) {
     .burger {
         display: block;
     }
 
-    nav { 
+    nav {
         display: none;
         flex-direction: column;
         width: 100%;
