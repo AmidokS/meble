@@ -34,6 +34,7 @@ header, h1 {
 .logo-image {
     height: 100px;
     max-width: 100%;
+    margin-right: 20px;
     transition: transform 0.2s ease;
 }
 
@@ -43,13 +44,13 @@ header, h1 {
 
 .site-title {
     font-size: 2.5rem;
-    background: linear-gradient(90deg, #888, #d4dee8); /* серо-синий градиент */
+    background: linear-gradient(90deg, #888, #d4dee8);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     font-weight: 800;
-    margin: 0 20px;
+    margin: 0;
     flex-grow: 1;
 }
 
@@ -157,7 +158,6 @@ footer {
     gap: 20px;
 }
 
-/* ===== Burger и адаптив ===== */
 .burger {
     display: none;
     font-size: 30px;
@@ -167,33 +167,27 @@ footer {
     cursor: pointer;
 }
 
+/* Адаптация для телефонов */
 @media (max-width: 768px) {
     .burger {
         display: block;
     }
 
     nav {
-        display: flex;
+        display: none;
         flex-direction: column;
         width: 100%;
         background-color: #1e2a38;
-        padding: 0;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    nav.active {
-        max-height: 200px;
+        padding: 10px 0;
     }
 
     nav a {
         padding: 10px 20px;
-        border-top: 1px solid #2f3f52;
+        
     }
 
-    nav a:last-child {
-        border-bottom: 1px solid #2f3f52;
+    nav.active {
+        display: flex;
     }
 
     .site-header {
