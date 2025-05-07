@@ -16,20 +16,25 @@ header, h1 {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #0c1a26;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #1e2a38, #2f3f52);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
 }
 
 .logo-link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .logo-image {
     height: 100px;
+    max-width: 100%;
+    margin-right: 20px;
     transition: transform 0.2s ease;
 }
 
@@ -39,25 +44,37 @@ header, h1 {
 
 .site-title {
     font-size: 2.5rem;
-    background: linear-gradient(90deg, #888, #1e2a38); /* серо-синий градиент */
+    background: linear-gradient(90deg, #888, #d4dee8); /* серо-синий градиент */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
     font-weight: 800;
-    margin: 0 20px;
+    margin: 0;
     flex-grow: 1;
+}
+
+.burger {
+    font-size: 30px;
+    background-color: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
 nav {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 nav a:hover {
@@ -148,4 +165,37 @@ footer {
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    nav { 
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1e2a38;
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 10px 20px;
+        border-top: 1px solid #2f3f52;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-title {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
 }

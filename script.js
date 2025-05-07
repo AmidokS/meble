@@ -13,3 +13,10 @@ for (let i = 1; i <= 20; i++) {
     link.appendChild(img);
     gallery.appendChild(link);
 }
+
+const burger = document.getElementById("burger");
+const nav = document.querySelector("nav");
+
+burger.addEventListener('click', () => {
+    nav.classList.toogle("active");
+});
